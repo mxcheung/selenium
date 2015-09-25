@@ -1,0 +1,184 @@
+Started by user anonymous
+Building in workspace D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/mxcheung/selenium.git # timeout=10
+Fetching upstream changes from https://github.com/mxcheung/selenium.git
+ > git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > git.exe config --local credential.username mxcheung # timeout=10
+ > git.exe config --local credential.helper store --file=\"C:\Windows\TEMP\git6634037788952527226.credentials\" # timeout=10
+ > git.exe -c core.askpass=true fetch --tags --progress https://github.com/mxcheung/selenium.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe config --local --remove-section credential # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 53ae3bb53e3b9a96998de4d39933e477d34df934 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 53ae3bb53e3b9a96998de4d39933e477d34df934
+ > git.exe rev-list 53ae3bb53e3b9a96998de4d39933e477d34df934 # timeout=10
+Parsing POMs
+Established TCP socket on 63342
+[Selenium-Maven-Template] $ "C:\Program Files\Java\jdk1.8.0_25/bin/java" -Xmx1024m -Xms1024m -Xdebug -cp D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-agent-1.7.jar;D:\SOFTWARE\apache-maven-3.3.3\boot\plexus-classworlds-2.5.2.jar;D:\SOFTWARE\apache-maven-3.3.3/conf/logging jenkins.maven3.agent.Maven32Main D:\SOFTWARE\apache-maven-3.3.3 D:\SOFTWARE\Jenkins\war\WEB-INF\lib\remoting-2.52.jar D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-interceptor-1.7.jar D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.7.jar 63342
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\pom.xml install
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Selenium Maven Template 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-template ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ maven-template ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ maven-template ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ maven-template ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] >>> driver-binary-downloader-maven-plugin:1.0.7:selenium (default) > test-compile @ maven-template >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ maven-template ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ maven-template ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ maven-template ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ maven-template ---
+[INFO] Nothing to compile - all classes are up to date
+[WARNING] Failed to getClass for com.lazerycode.selenium.SeleniumServerMojo
+[INFO] 
+[INFO] <<< driver-binary-downloader-maven-plugin:1.0.7:selenium (default) < test-compile @ maven-template <<<
+[INFO] 
+[INFO] --- driver-binary-downloader-maven-plugin:1.0.7:selenium (default) @ maven-template ---
+[INFO]  
+[INFO] --------------------------------------------------------
+[INFO]  DOWNLOADING SELENIUM STAND-ALONE EXECUTABLE BINARIES...
+[INFO] --------------------------------------------------------
+[INFO]  
+[INFO]  file:/D:/software/Jenkins/workspace/Selenium%20Selenium-Maven-Template/Selenium-Maven-Template/src/test/resources/RepositoryMap.xml is valid
+[INFO]  
+[INFO] Only get drivers for current Operating System: true
+[INFO] Getting drivers for current operating system only.
+[INFO] Archives will be downloaded to 'D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\src\test\resources\selenium_standalone_zips'
+[INFO] Standalone executable files will be extracted to 'D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\selenium_standalone'
+[INFO]  
+[INFO] Preparing to download Selenium Standalone Executable Binaries...
+[INFO] Binary 'IEDriverServer.exe' Exists: true
+[INFO] Binary 'operadriver.exe' Exists: true
+[INFO] Binary 'chromedriver.exe' Exists: true
+[INFO] Binary 'phantomjs.exe' Exists: true
+[INFO] Setting maven property - ${webdriver.ie.driver} = D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\selenium_standalone\windows\internetexplorer\64bit\IEDriverServer.exe
+[INFO] Setting maven property - ${webdriver.opera.driver} = D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\selenium_standalone\windows\operachromium\64bit\operadriver.exe
+[INFO] Setting maven property - ${webdriver.chrome.driver} = D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\selenium_standalone\windows\googlechrome\64bit\chromedriver.exe
+[INFO] Setting maven property - ${phantomjs.binary.path} = D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\selenium_standalone\windows\phantomjs\64bit\phantomjs.exe
+[INFO]  
+[INFO] --------------------------------------------------------
+[INFO] SELENIUM STAND-ALONE EXECUTABLE DOWNLOADS COMPLETE
+[INFO] --------------------------------------------------------
+[INFO]  
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ maven-template ---
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ maven-template ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\target\maven-template-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.18.1:integration-test (default) @ maven-template ---
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.pom (7 KB at 2.8 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.pom (2 KB at 4.2 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.3/maven-plugin-tools-3.3.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-tools/3.3/maven-plugin-tools-3.3.pom (13 KB at 31.0 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.pom (3 KB at 6.0 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.pom (3 KB at 7.6 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.pom (3 KB at 6.1 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/15/maven-shared-components-15.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/15/maven-shared-components-15.pom (10 KB at 23.5 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.jar
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar (11 KB at 13.2 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/plugin-tools/maven-plugin-annotations/3.3/maven-plugin-annotations-3.3.jar (14 KB at 14.0 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-api/2.18.1/surefire-api-2.18.1.jar (145 KB at 83.5 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-booter/2.18.1/surefire-booter-2.18.1.jar (39 KB at 15.2 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/maven-surefire-common/2.18.1/maven-surefire-common-2.18.1.jar (269 KB at 98.6 KB/sec)
+[INFO] Failsafe report directory: D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\target\failsafe-reports
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/2.18.1/surefire-testng-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/2.18.1/surefire-testng-2.18.1.pom (4 KB at 8.1 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-providers/2.18.1/surefire-providers-2.18.1.pom (3 KB at 6.7 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18.1/common-java5-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18.1/common-java5-2.18.1.pom (2 KB at 4.6 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/2.18.1/surefire-testng-utils-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/2.18.1/surefire-testng-utils-2.18.1.pom (3 KB at 7.9 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18.1/surefire-grouper-2.18.1.pom
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18.1/surefire-grouper-2.18.1.pom (3 KB at 6.9 KB/sec)
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/2.18.1/surefire-testng-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18.1/common-java5-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/2.18.1/surefire-testng-utils-2.18.1.jar
+[INFO] Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18.1/surefire-grouper-2.18.1.jar
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng/2.18.1/surefire-testng-2.18.1.jar (36 KB at 47.7 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-testng-utils/2.18.1/surefire-testng-utils-2.18.1.jar (29 KB at 35.3 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/common-java5/2.18.1/common-java5-2.18.1.jar (37 KB at 31.3 KB/sec)
+[INFO] Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/surefire/surefire-grouper/2.18.1/surefire-grouper-2.18.1.jar (38 KB at 18.3 KB/sec)
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.lazerycode.selenium.tests.GoogleExampleWebDriver
+Configuring TestNG with: TestNG652Configurator
+ 
+Current Operating System: WINDOWS 7
+Current Architecture: amd64
+Current Browser Selection: FIREFOX
+ 
+Page title is: Google
+Page title is: Cheese! - Google Search
+Page title is: Google
+Page title is: Milk! - Google Search
+Sep 26, 2015 11:20:25 PM org.openqa.selenium.os.UnixProcess$SeleniumWatchDog destroyHarder
+INFO: Command failed to close cleanly. Destroying forcefully (v2). org.openqa.selenium.os.UnixProcess$SeleniumWatchDog@6a024a67
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.368 sec - in com.lazerycode.selenium.tests.GoogleExampleWebDriver
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.18.1:verify (default) @ maven-template ---
+[INFO] Failsafe report directory: D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\target\failsafe-reports
+[JENKINS] Recording test results
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ maven-template ---
+[INFO] Installing D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\target\maven-template-1.0-SNAPSHOT.jar to C:\Windows\system32\config\systemprofile\.m2\repository\com\lazerycode\selenium\maven-template\1.0-SNAPSHOT\maven-template-1.0-SNAPSHOT.jar
+[INFO] Installing D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\pom.xml to C:\Windows\system32\config\systemprofile\.m2\repository\com\lazerycode\selenium\maven-template\1.0-SNAPSHOT\maven-template-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 38.138 s
+[INFO] Finished at: 2015-09-26T23:20:32+10:00
+[INFO] Final Memory: 25M/981M
+[INFO] ------------------------------------------------------------------------
+[JENKINS] Archiving D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\pom.xml to com.lazerycode.selenium/maven-template/1.0-SNAPSHOT/maven-template-1.0-SNAPSHOT.pom
+[JENKINS] Archiving D:\software\Jenkins\workspace\Selenium Selenium-Maven-Template\Selenium-Maven-Template\target\maven-template-1.0-SNAPSHOT.jar to com.lazerycode.selenium/maven-template/1.0-SNAPSHOT/maven-template-1.0-SNAPSHOT.jar
+channel stopped
+Finished: SUCCESS
