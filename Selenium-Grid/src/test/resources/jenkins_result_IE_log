@@ -1,0 +1,73 @@
+Started by user anonymous
+Building in workspace D:\software\Jenkins\workspace\selenium grid test
+ > git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/mxcheung/selenium.git # timeout=10
+Fetching upstream changes from https://github.com/mxcheung/selenium.git
+ > git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > git.exe config --local credential.username mxcheung # timeout=10
+ > git.exe config --local credential.helper store --file=\"C:\Windows\TEMP\git4555893042944458349.credentials\" # timeout=10
+ > git.exe -c core.askpass=true fetch --tags --progress https://github.com/mxcheung/selenium.git +refs/heads/*:refs/remotes/origin/*
+ > git.exe config --local --remove-section credential # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision d8ea4211fe211fa3be512fadcb5003579ac02d83 (refs/remotes/origin/master)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f d8ea4211fe211fa3be512fadcb5003579ac02d83
+ > git.exe rev-list d8ea4211fe211fa3be512fadcb5003579ac02d83 # timeout=10
+Parsing POMs
+Established TCP socket on 49732
+[Selenium-Grid] $ "C:\Program Files\Java\jdk1.8.0_25/bin/java" -Xmx1024m -Xms1024m -Xdebug -cp D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-agent-1.7.jar;D:\SOFTWARE\apache-maven-3.3.3\boot\plexus-classworlds-2.5.2.jar;D:\SOFTWARE\apache-maven-3.3.3/conf/logging jenkins.maven3.agent.Maven32Main D:\SOFTWARE\apache-maven-3.3.3 D:\SOFTWARE\Jenkins\war\WEB-INF\lib\remoting-2.52.jar D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven32-interceptor-1.7.jar D:\software\Jenkins\plugins\maven-plugin\WEB-INF\lib\maven3-interceptor-commons-1.7.jar 49732
+<===[JENKINS REMOTING CAPACITY]===>channel started
+Executing Maven:  -B -f D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\pom.xml clean test
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Selenium-Grid 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ Selenium-Grid ---
+[INFO] Deleting D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ Selenium-Grid ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ Selenium-Grid ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ Selenium-Grid ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ Selenium-Grid ---
+[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.15:test (default-test) @ Selenium-Grid ---
+[INFO] Surefire report directory: D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running TestSuite
+Test Video: nullc2ad8d40-1a63-47c3-883d-2010ba082fd2
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.552 sec - in TestSuite
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[JENKINS] Recording test results
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 15.235 s
+[INFO] Finished at: 2015-09-30T22:05:06+10:00
+[INFO] Final Memory: 26M/981M
+[INFO] ------------------------------------------------------------------------
+Waiting for Jenkins to finish collecting data
+[JENKINS] Archiving D:\software\Jenkins\workspace\selenium grid test\Selenium-Grid\pom.xml to Selenium-Grid/Selenium-Grid/0.0.1-SNAPSHOT/Selenium-Grid-0.0.1-SNAPSHOT.pom
+channel stopped
+Finished: SUCCESS

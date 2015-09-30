@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [test_suite]">
+  <test name="Test(failed)" preserve-order="true">
+    <classes>
+      <class name="java_example.test">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="test_google"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- java_example.test -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [test_suite] -->
